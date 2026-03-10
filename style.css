@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.box {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+button {
+  background: #6a0dad;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.dashboard {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 180px;
+  background: #eee;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}

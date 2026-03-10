@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>PDV • ENDLESS</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex justify-center py-10">
+
+  <main class="w-full max-w-3xl px-4 space-y-6">
+
+    <!-- TÍTULO -->
+    <header class="text-center">
+      <h1 class="text-3xl font-bold">
+        🍧 ENDLESS TECNOLOGIA
+      </h1>
+      <p class="text-sm text-gray-500 mt-1">
+        Controle simples de vendas e faturamento
+      </p>
+    </header>
+
+    <!-- CADASTRO DE PRODUTO -->
+    <section class="bg-white rounded-xl shadow p-6">
+      <h2 class="text-xl font-semibold mb-4">Cadastrar Produto</h2>
+
+      <div class="space-y-3">
+        <input
+          id="nomeProduto"
+          type="text"
+          placeholder="Nome do produto"
+          class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-purple-300"
+        >
+
+        <input
+          id="precoVenda"
+          type="number"
+          step="0.01"
+          placeholder="Preço de venda"
+          class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-purple-300"
+        >
+
+        <button
+          onclick="cadastrarProduto()"
+          class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition"
+        >
+          Cadastrar Produto
+        </button>
+      </div>
+    </section>
+
+    <!-- REGISTRAR VENDA -->
+    <section class="bg-white rounded-xl shadow p-6">
+      <h2 class="text-xl font-semibold mb-4">Registrar Venda</h2>
+
+      <div class="space-y-3">
+        <select
+          id="produtoVenda"
+          class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-purple-300"
+        >
+          <option value="">Selecione um produto</option>
+        </select>
+
+        <button
+          onclick="registrarVenda()"
+          class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition"
+        >
+          Vender
+        </button>
+      </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="bg-white rounded-xl shadow p-6">
+      <h2 class="text-xl font-semibold mb-6">Dashboard</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        <div class="bg-gray-50 rounded-lg p-4 text-center">
+          <p class="text-sm text-gray-500">Faturamento</p>
+          <strong id="faturamento" class="text-xl block">R$ 0,00</strong>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-4 text-center">
+          <p class="text-sm text-gray-500">Lucro</p>
+          <strong id="lucro" class="text-xl block">R$ 0,00</strong>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-4 text-center">
+          <p class="text-sm text-gray-500">Vendas</p>
+          <strong id="qtdVendas" class="text-xl block">0</strong>
+        </div>
+      </div>
+
+      <button
+        onclick="fecharCaixa()"
+        class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition"
+      >
+        Fechar Caixa
+      </button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
